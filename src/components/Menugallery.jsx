@@ -58,6 +58,7 @@ const MenuGallery = () => {
       </div>
     </div>
   );
+  
 };
 
 export default MenuGallery;
