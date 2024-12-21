@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaInstagram, FaYoutube, FaPinterest } from 'react-icons/fa';
-import { MdDarkMode, MdLightMode, MdMenu, MdPhone, MdEmail } from 'react-icons/md';
+import { MdDarkMode, MdLightMode, MdMenu, MdClose, MdPhone, MdEmail } from 'react-icons/md';
 import { Link } from 'react-scroll';
 
 const Header = () => {
@@ -73,11 +73,19 @@ const Header = () => {
               onClick={toggleDarkMode}
             />
           )}
-          <MdMenu
-            className="text-lg hover:text-[#bca067] cursor-pointer md:hidden"
-            onClick={toggleMenu}
-            title="Menu"
-          />
+          {isMenuOpen ? (
+            <MdClose
+              className="text-lg hover:text-[#bca067] cursor-pointer md:hidden"
+              onClick={toggleMenu}
+              title="Close Menu"
+            />
+          ) : (
+            <MdMenu
+              className="text-lg hover:text-[#bca067] cursor-pointer md:hidden"
+              onClick={toggleMenu}
+              title="Open Menu"
+            />
+          )}
         </div>
       </div>
 
