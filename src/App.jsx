@@ -1,5 +1,6 @@
 import AboutUs from "./components/AboutUs"
 import Header from "./components/Header"
+import MenuGallery from "./components/menugallery"
 import SetUsApart from "./components/SetUsApart"
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <AboutUs />
       <SetUsApart />
+      <MenuGallery />
     </>
   )
 }

@@ -5,7 +5,7 @@ const SetUsApart = () => {
     <div className="space-y-8">
       {/* Heading: What Sets Us Apart */}
       <div className="text-center">
-        <h1 className="text-3xl font-semibold text-[#bca067] mb-8 mt-8">What Sets Us Apart</h1>
+        <h1 className="text-3xl font-semibold text-[#bca067] mb-8 mt-8 border-b-4 border-[#bca067] inline-block pb-2">What Sets Us Apart</h1>
       </div>
 
       {/* Single Section with Image on the Left and Text on the Right */}
