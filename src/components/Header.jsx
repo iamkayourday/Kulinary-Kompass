@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaInstagram, FaYoutube, FaPinterest } from 'react-icons/fa';
 import { MdDarkMode, MdLightMode, MdMenu, MdPhone, MdEmail } from 'react-icons/md';
 import { Link } from 'react-scroll';
@@ -12,11 +12,20 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Toggle dark mode
+  // Toggle dark mode and update localStorage
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    document.documentElement.classList.toggle('dark', !isDarkMode);
+    const newMode = !isDarkMode;
+    setIsDarkMode(newMode);
+    localStorage.setItem('dark-mode', newMode); // Save the preference
+    document.documentElement.classList.toggle('dark', newMode); // Apply dark mode class
   };
+
+  // Initialize dark mode based on localStorage on page load
+  useEffect(() => {
+    const storedMode = localStorage.getItem('dark-mode') === 'true'; // Get stored preference
+    setIsDarkMode(storedMode);
+    document.documentElement.classList.toggle('dark', storedMode); // Apply dark mode class
+  }, []);
 
   // Close the menu when a navigation link is clicked (for mobile)
   const closeMenu = () => {
@@ -73,9 +82,7 @@ const Header = () => {
       </div>
 
       {/* Navigation Menu */}
-      <nav
-        className={`mt-4 transition-all duration-300 ${isMenuOpen ? 'block' : 'hidden'} md:block`}
-      >
+      <nav className={`mt-4 transition-all duration-300 ${isMenuOpen ? 'block' : 'hidden'} md:block`}>
         <ul
           className="flex flex-col md:flex-row justify-center items-center gap-4 px-6 py-3 rounded-3xl border border-[#bca067] mx-auto w-full max-w-6xl"
           style={{

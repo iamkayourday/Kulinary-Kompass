@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Gallery = () => {
   // menus array
@@ -33,34 +34,39 @@ const Gallery = () => {
 
   return (
     <section id="gallery">
-    <div className="space-y-8 max-w-6xl mx-auto px-4">
-      {/* Heading */}
-      <div className="text-center">
-        <h1 className="text-3xl font-semibold text-[#bca067] mb-8 mt-8 border-b-4 border-[#bca067] inline-block pb-2">
-          Menu Gallery
-        </h1>
-      </div>
+      <div className="space-y-8 max-w-6xl mx-auto px-4">
+        {/* Heading */}
+        <div className="text-center">
+          <h1 className="text-3xl font-semibold text-[#bca067] mb-8 mt-8 border-b-4 border-[#bca067] inline-block pb-2">
+            Menu Gallery
+          </h1>
+        </div>
 
-      {/* Menu Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {/* Dynamically rendering menus */}
-        {menus.map((menu, index) => (
-          <div
-            key={index}
-            className="transition-transform duration-500 ease-in-out transform hover:scale-105 rounded-xl shadow-lg border border-[#bca067] overflow-hidden"
-          >
-            <img
-              src={menu}
-              alt={`Dish ${index + 1}`}
-              className="w-full h-64 object-cover"
-            />
-          </div>
-        ))}
+        {/* Menu Grid with Fade-in Animation */}
+        <motion.div
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
+        >
+          {/* Dynamically rendering menus with hover animation */}
+          {menus.map((menu, index) => (
+            <motion.div
+              key={index}
+              className="transition-transform duration-500 ease-in-out transform hover:scale-105 rounded-xl shadow-lg border border-[#bca067] overflow-hidden"
+              whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)" }}
+            >
+              <img
+                src={menu}
+                alt={`Dish ${index + 1}`}
+                className="w-full h-64 object-cover"
+              />
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
-    </div>
     </section>
   );
-  
 };
 
 export default Gallery;
