@@ -1,4 +1,5 @@
 import AboutUs from "./components/AboutUs"
+import Contactus from "./components/Contactus"
 import Gallery from "./components/Gallery"
 import Header from "./components/Header"
 import SetUsApart from "./components/SetUsApart"
@@ -12,6 +13,7 @@ function App() {
       <AboutUs />
       <SetUsApart />
       <Gallery />
+      <Contactus />
     </>
   )
 }
