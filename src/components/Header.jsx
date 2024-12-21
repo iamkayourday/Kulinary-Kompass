@@ -1,16 +1,30 @@
 import React, { useState } from 'react';
 import { FaInstagram, FaYoutube, FaPinterest } from 'react-icons/fa';
-import { MdSearch, MdDarkMode, MdMenu } from 'react-icons/md';
+import { MdDarkMode, MdLightMode, MdMenu, MdPhone, MdEmail } from 'react-icons/md';
+import { Link } from 'react-scroll';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
+  // Toggle menu visibility
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Toggle dark mode
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    document.documentElement.classList.toggle('dark', !isDarkMode);
+  };
+
+  // Close the menu when a navigation link is clicked (for mobile)
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
-    <header className="p-4">
+    <header className={`p-4 ${isDarkMode ? 'bg-[#1e1e1f] text-white' : 'bg-[#ebe7e4] text-black'}`}>
       {/* Header Wrapper */}
       <div
         className="flex items-center justify-between gap-4 px-6 py-3 rounded-3xl border border-[#bca067] mx-auto w-full max-w-6xl"
@@ -22,14 +36,11 @@ const Header = () => {
       >
         {/* Social Media Icons */}
         <div className="flex gap-3">
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-            <FaInstagram className="text-lg hover:text-[#bca067]" />
+          <a href="mailto:hello@kulinarykompass.co.uk" target="_blank" rel="noopener noreferrer">
+            <MdEmail className="text-lg hover:text-[#bca067]" />
           </a>
-          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-            <FaYoutube className="text-lg hover:text-[#bca067]" />
-          </a>
-          <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">
-            <FaPinterest className="text-lg hover:text-[#bca067]" />
+          <a href="tel:00553123-2323" target="_blank" rel="noopener noreferrer">
+            <MdPhone className="text-lg hover:text-[#bca067]" />
           </a>
         </div>
 
@@ -40,8 +51,19 @@ const Header = () => {
 
         {/* Action Icons */}
         <div className="flex items-center gap-3">
-          <MdDarkMode className="text-lg hover:text-[#bca067] cursor-pointer" title="Toggle Dark Mode" />
-          <MdSearch className="text-lg hover:text-[#bca067] cursor-pointer" title="Search" />
+          {isDarkMode ? (
+            <MdLightMode
+              className="text-lg hover:text-[#bca067] cursor-pointer"
+              title="Switch to Light Mode"
+              onClick={toggleDarkMode}
+            />
+          ) : (
+            <MdDarkMode
+              className="text-lg hover:text-[#bca067] cursor-pointer"
+              title="Switch to Dark Mode"
+              onClick={toggleDarkMode}
+            />
+          )}
           <MdMenu
             className="text-lg hover:text-[#bca067] cursor-pointer md:hidden"
             onClick={toggleMenu}
@@ -63,29 +85,52 @@ const Header = () => {
           }}
         >
           <li>
-            <a href="#home" className="hover:text-[#bca067] transition-colors">
+            <Link
+              to="home"
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="hover:text-[#bca067] transition-colors cursor-pointer"
+              onClick={closeMenu} // Close the menu when this link is clicked
+            >
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#about" className="hover:text-[#bca067] transition-colors">
+            <Link
+              to="about"
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="hover:text-[#bca067] transition-colors cursor-pointer"
+              onClick={closeMenu}
+            >
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#recipes" className="hover:text-[#bca067] transition-colors">
-              Recipes
-            </a>
+            <Link
+              to="gallery"
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="hover:text-[#bca067] transition-colors cursor-pointer"
+              onClick={closeMenu}
+            >
+              Gallery
+            </Link>
           </li>
           <li>
-            <a href="#books" className="hover:text-[#bca067] transition-colors">
-              Books
-            </a>
-          </li>
-          <li>
-            <a href="#contact" className="hover:text-[#bca067] transition-colors">
+            <Link
+              to="contact"
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="hover:text-[#bca067] transition-colors cursor-pointer"
+              onClick={closeMenu}
+            >
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

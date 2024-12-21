@@ -3,5 +3,20 @@
 @tailwind utilities;
 
 body {
-    background-color:  #ebe7e4;
+    background-color:  ;
 }
+
+/* Global light mode background */
+body {
+    background-color: #ebe7e4;
+    color: #1e1e1f;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Dark mode background */
+  body.dark {
+    background-color: #000000;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  

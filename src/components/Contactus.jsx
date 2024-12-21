@@ -14,29 +14,32 @@ function Contactus() {
   };
 
   return (
+    <section id="contact">
     <div className="max-w-4xl mx-auto px-4 py-8">
       {isSubmitted ? (
         <div className="flex flex-col items-center justify-center min-h-[300px] text-center">
-          <h1 className="text-3xl font-semibold text-[#bca067] mb-4">Thank You!</h1>
-          <p className="text-gray-600">
+          <h1 className="text-3xl font-semibold text-[#bca067] mb-4 dark:text-white">Thank You!</h1>
+          <p className="text-gray-600 dark:text-white">
             Your message has been sent successfully. We will get back to you shortly!
           </p>
         </div>
       ) : (
         <>
           {/* Heading */}
-          <h1 className="text-3xl font-semibold text-center text-[#bca067] mb-6">
+          <h1 className="text-3xl font-semibold text-center text-[#bca067] mb-6 relative">
             Contact Us
+            <span className="absolute bottom-0 left-1/2 w-36 h-1 bg-[#bca067] transform -translate-x-1/2"></span>
           </h1>
 
           {/* Intro Text */}
-          <p className="text-center text-gray-600 mb-8 leading-6">
+          <div className='border border-[#bca067] rounded-3xl mb-8'>
+          <p className="text-center text-gray-600 mb-8 leading-6 dark:text-white ">
             We'd love to hear from you. <br />
             We offer full-service catering for any event, large or small. We
             understand your needs and will cater the food to satisfy the biggest
             criteria of them all—both look and taste. Do not hesitate to contact us.
           </p>
-          <p className="text-center text-gray-600 mb-6">
+          <p className="text-center text-gray-600 mb-6 dark:text-white">
             You can also contact us by phone at{' '}
             <a href="tel:00553123-2323" className="text-[#bca067] underline">
               00553123-2323
@@ -44,16 +47,16 @@ function Contactus() {
             or email{' '}
             <a
               href="mailto:kazeembalogun12@hotmail.com"
-              className="text-[#bca067] underline"
+              className="text-[#bca067] underline "
             >
-              kazeembalogun12@hotmail.com
+              hello@kulinarykompass.co.uk
             </a>
             .
           </p>
-          <p className="text-center text-gray-600 mb-8">
+          <p className="text-center text-gray-600 mb-8 dark:text-white">
             Or you can send us a message here:
           </p>
-
+          </div>
           {/* Form */}
           <form
             onSubmit={handleSubmit}
@@ -139,6 +142,7 @@ function Contactus() {
         </>
       )}
     </div>
+    </section>
   );
 }
 

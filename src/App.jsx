@@ -9,11 +9,14 @@ function App() {
 
   return (
     <>
+    <div className='dark:bg-[#1e1e1f]'>
       <Header />
       <AboutUs />
       <SetUsApart />
       <Gallery />
       <Contactus />
+    </div>
+     
     </>
   )
 }

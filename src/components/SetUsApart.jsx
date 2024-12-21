@@ -31,7 +31,7 @@ const SetUsApart = () => {
           {/* Tailored to Your Needs */}
           <div className="border border-[#bca067] p-4 rounded-xl mb-4">
             <h2 className="text-2xl font-semibold text-[#bca067] mb-4">Tailored to Your Needs</h2>
-            <p className="text-lg text-gray-700">
+            <p className="text-lg text-gray-700 dark:text-white">
               We understand that everyone's kulinary journey is unique. Whether you're a novice cook or looking to expand your repertoire, your kulinary kompass adapts to your skill level, preferences, and dietary requirements all on budget. Our goal is to make cooking a personalized and enjoyable experience for you.
             </p>
           </div>
@@ -39,7 +39,7 @@ const SetUsApart = () => {
           {/* Budget-Friendly Recipes */}
           <div className="border border-[#bca067] p-4 rounded-xl mb-4">
             <h2 className="text-2xl font-semibold text-[#bca067] mb-4">Budget-Friendly Recipes</h2>
-            <p className="text-lg text-gray-700">
+            <p className="text-lg text-gray-700 dark:text-white">
               We believe that delicious and nutritious meals shouldn't break the bank. Our team curates a collection of budget-friendly recipes that prioritize affordability without compromising on taste or nutritional value. Learn to cook meals that are not only satisfying but also easy on your wallet.
             </p>
           </div>
@@ -47,7 +47,7 @@ const SetUsApart = () => {
           {/* Assisted Cooking Support */}
           <div className="border border-[#bca067] p-4 rounded-xl">
             <h2 className="text-2xl font-semibold text-[#bca067] mb-4">Assisted Cooking Support</h2>
-            <p className="text-lg text-gray-700">
+            <p className="text-lg text-gray-700 dark:text-white">
               Our assisted cooking service provides step-by-step guidance, ensuring you feel confident and capable in the kitchen. From creating a shopping list of basic knife skills to mastering the perfect pasta, we're here to assist you every step of the way.
             </p>
           </div>

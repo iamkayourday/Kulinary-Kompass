@@ -32,6 +32,7 @@ const Gallery = () => {
   ];
 
   return (
+    <section id="gallery">
     <div className="space-y-8 max-w-6xl mx-auto px-4">
       {/* Heading */}
       <div className="text-center">
@@ -57,6 +58,7 @@ const Gallery = () => {
         ))}
       </div>
     </div>
+    </section>
   );
   
 };
