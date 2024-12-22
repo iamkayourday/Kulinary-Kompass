@@ -30,6 +30,7 @@ const Gallery = () => {
     "img/menu_24.jpg",
     "img/menu_26.jpg",
     "img/menu_27.jpg",
+    "img/menu_25.jpg",
   ];
 
   return (
