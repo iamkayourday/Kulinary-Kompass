@@ -13,7 +13,7 @@ const AboutUs = () => {
           transition={{ duration: 1 }}
         >
           <img
-            src="menu_3.jpg"
+            src="menu_3.png"
             alt="Home Menu"
             className="w-full h-auto object-cover rounded-xl shadow-lg border border-[#bca067]"
           />
