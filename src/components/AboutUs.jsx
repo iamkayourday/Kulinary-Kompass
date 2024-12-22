@@ -53,7 +53,7 @@ const AboutUs = () => {
               </motion.h2>
 
               <motion.p
-                className="text-lg text-gray-700 dark:text-white border border-[#bca067] p-4 rounded-xl"
+                className="text-lg text-white dark:text-white border border-[#bca067] p-4 rounded-xl"
                 initial={{ x: -100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1, delay: 0.6 }}
@@ -72,7 +72,7 @@ const AboutUs = () => {
                 </motion.h2>
 
                 <motion.p
-                  className="text-lg text-gray-700 dark:text-white border border-[#bca067] p-4 rounded-xl"
+                  className="text-lg text-white dark:text-white border border-[#bca067] p-4 rounded-xl"
                   initial={{ x: -100, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ duration: 1, delay: 1 }}

@@ -60,7 +60,7 @@ const SetUsApart = () => {
             <h2 className="text-2xl font-semibold text-[#bca067] mb-4">
               Tailored to Your Needs
             </h2>
-            <p className="text-lg text-gray-700 dark:text-white">
+            <p className="text-lg text-white dark:text-white">
               We understand that everyone's kulinary journey is unique. Whether
               you're a novice cook or looking to expand your repertoire, your
               kulinary kompass adapts to your skill level, preferences, and
@@ -80,7 +80,7 @@ const SetUsApart = () => {
             <h2 className="text-2xl font-semibold text-[#bca067] mb-4">
               Budget-Friendly Recipes
             </h2>
-            <p className="text-lg text-gray-700 dark:text-white">
+            <p className="text-lg text-white dark:text-white">
               We believe that delicious and nutritious meals shouldn't break the
               bank. Our team curates a collection of budget-friendly recipes
               that prioritize affordability without compromising on taste or
@@ -100,7 +100,7 @@ const SetUsApart = () => {
             <h2 className="text-2xl font-semibold text-[#bca067] mb-4">
               Assisted Cooking Support
             </h2>
-            <p className="text-lg text-gray-700 dark:text-white">
+            <p className="text-lg text-white dark:text-white">
               Our assisted cooking service provides step-by-step guidance,
               ensuring you feel confident and capable in the kitchen. From
               creating a shopping list of basic knife skills to mastering the
