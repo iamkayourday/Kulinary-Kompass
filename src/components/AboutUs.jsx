@@ -13,8 +13,8 @@ const AboutUs = () => {
           transition={{ duration: 1 }}
         >
           <img
-            src="menu_2.png"
-            alt="About Us"
+            src="menu_3.jpg"
+            alt="Home Menu"
             className="w-full h-auto object-cover rounded-xl shadow-lg border border-[#bca067]"
           />
         </motion.div>
