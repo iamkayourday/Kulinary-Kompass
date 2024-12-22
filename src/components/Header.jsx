@@ -33,7 +33,7 @@ const Header = () => {
   };
 
   return (
-    <header className={`p-4 ${isDarkMode ? 'bg-[#1e1e1f] text-white' : 'bg-[#ebe7e4] text-black'}`}>
+    <header className={`p-4 ${isDarkMode ? 'bg-[#1e1e1f] text-white' : 'bg-[#1e1e1f] text-white'}`}>
       {/* Header Wrapper */}
       <div
         className="flex items-center justify-between gap-4 px-6 py-3 rounded-3xl border border-[#bca067] mx-auto w-full max-w-6xl"
@@ -60,7 +60,7 @@ const Header = () => {
 
         {/* Action Icons */}
         <div className="flex items-center gap-3">
-          {isDarkMode ? (
+          {/* {isDarkMode ? (
             <MdLightMode
               className="text-lg hover:text-[#bca067] cursor-pointer"
               title="Switch to Light Mode"
@@ -72,7 +72,7 @@ const Header = () => {
               title="Switch to Dark Mode"
               onClick={toggleDarkMode}
             />
-          )}
+          )} */}
           {isMenuOpen ? (
             <MdClose
               className="text-lg hover:text-[#bca067] cursor-pointer md:hidden"
