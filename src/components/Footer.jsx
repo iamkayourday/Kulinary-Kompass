@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const Footer = () => {
   return (
     <motion.footer
-      className=" bg-[#000000] text-white py-6 mt-12 border-4 border-[#bca067] rounded-lg" // Added border around the footer with rounded corners
+      className=" bg-[#1e1e1f] text-white py-6 mt-12 border-4 border-[#bca067] rounded-lg" // Added border around the footer with rounded corners
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
