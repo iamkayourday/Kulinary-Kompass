@@ -50,7 +50,7 @@ function Contactus() {
             <h1 className="text-3xl font-semibold text-[#bca067] mb-4 dark:text-white">
               Thank You!
             </h1>
-            <p className="text-gray-600 dark:text-white">
+            <p className="text-white dark:text-white">
               Your message has been sent successfully. We will get back to you
               shortly!
             </p>
@@ -73,14 +73,14 @@ function Contactus() {
               <span className="absolute bottom-0 left-1/2 w-36 h-1 bg-[#bca067] transform -translate-x-1/2"></span>
             </h1>
             <div className="border border-[#bca067] rounded-3xl mb-8">
-              <p className="text-center text-gray-600 mb-8 leading-6 dark:text-white ">
+              <p className="text-center text-white mb-8 leading-6 dark:text-white ">
                 We'd love to hear from you. <br />
                 We offer full-service catering for any event, large or small. We
                 understand your needs and will cater the food to satisfy the
                 biggest criteria of them all—both look and taste. Do not
                 hesitate to contact us.
               </p>
-              <p className="text-center text-gray-600 mb-6 dark:text-white">
+              <p className="text-center text-white mb-6 dark:text-white">
                 You can also contact us by phone at{" "}
                 <a
                   href="tel:00553123-2323"
@@ -97,7 +97,7 @@ function Contactus() {
                 </a>
                 .
               </p>
-              <p className="text-center text-gray-600 mb-8 dark:text-white">
+              <p className="text-center text-white mb-8 dark:text-white">
                 Or you can send us a message here:
               </p>
             </div>
