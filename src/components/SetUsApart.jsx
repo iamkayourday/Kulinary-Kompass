@@ -32,6 +32,7 @@ const SetUsApart = () => {
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
+        whileHover={{ scale: 1.02 }}
       >
         {/* Left Image Section */}
         <motion.div
@@ -39,6 +40,10 @@ const SetUsApart = () => {
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
+          whileHover={{
+            scale: 1.05,
+            transition: { duration: 0.3 },
+          }}
         >
           <img
             src="Apart.jpg"
@@ -56,6 +61,9 @@ const SetUsApart = () => {
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
+            whileHover={{
+              boxShadow: "0px 10px 20px rgba(188, 160, 103, 0.3)",
+            }}
           >
             <h2 className="text-2xl font-semibold text-[#bca067] mb-4">
               Tailored to Your Needs
@@ -76,6 +84,9 @@ const SetUsApart = () => {
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.6 }}
+            whileHover={{
+              boxShadow: "0px 10px 20px rgba(188, 160, 103, 0.3)",
+            }}
           >
             <h2 className="text-2xl font-semibold text-[#bca067] mb-4">
               Budget-Friendly Recipes
@@ -96,6 +107,9 @@ const SetUsApart = () => {
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.8 }}
+            whileHover={{
+              boxShadow: "0px 10px 20px rgba(188, 160, 103, 0.3)",
+            }}
           >
             <h2 className="text-2xl font-semibold text-[#bca067] mb-4">
               Assisted Cooking Support

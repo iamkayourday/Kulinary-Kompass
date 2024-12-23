@@ -38,12 +38,17 @@ const Gallery = () => {
       <div className="space-y-8 max-w-6xl mx-auto px-4">
         {/* Heading */}
         <div className="text-center">
-          <h1 className="text-3xl font-semibold text-[#bca067] mb-8 mt-8 border-b-4 border-[#bca067] inline-block pb-2">
+          <motion.h1
+            className="text-3xl font-semibold text-[#bca067] mb-8 mt-8 border-b-4 border-[#bca067] inline-block pb-2"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
             Menu Gallery
-          </h1>
+          </motion.h1>
         </div>
 
-        {/* Menu Grid with Fade-in Animation */}
+        {/* Menu Grid with Fade-in and Staggered Animation */}
         <motion.div
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
           initial={{ opacity: 0 }}
@@ -55,7 +60,16 @@ const Gallery = () => {
             <motion.div
               key={index}
               className="transition-transform duration-500 ease-in-out transform hover:scale-105 rounded-xl shadow-lg border border-[#bca067] overflow-hidden"
-              whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)" }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)",
+              }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.1, // Staggering the animation for each image
+              }}
             >
               <img
                 src={menu}
