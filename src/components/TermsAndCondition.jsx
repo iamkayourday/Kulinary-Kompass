@@ -16,19 +16,13 @@ const TermsAndCondition = () => {
       <article className="space-y-6">
         <div className="border border-[#bca067] p-4 rounded-xl">
           <p className="mb-5">
-            Welcome to Kulinary Kompass (www.kulinarykompass.co.uk). These Terms
+            Welcome to Kulinary Kompass <a className="text-[#bca067]" href="www.kulinarykompass.co.uk">www.kulinarykompass.co.uk</a>. These Terms
             and Conditions govern your use of the Website and any services,
             information, or materials provided by Kulinary Kompass. By accessing
             or using the Website, you agree to comply with these Terms. If you
             do not agree, please do not use the Website.
           </p>
-          <p className="mb-5">
-            Welcome to Kulinary Kompass (www.kulinarykompass.co.uk). These Terms
-            and Conditions govern your use of the Website and any services,
-            information, or materials provided by Kulinary Kompass. By accessing
-            or using the Website, you agree to comply with these Terms. If you
-            do not agree, please do not use the Website.
-          </p>
+          
           <p className="mb-5">
             Kulinary Kompass is dedicated to empowering young adults,
             particularly those in care, to develop culinary skills, understand
