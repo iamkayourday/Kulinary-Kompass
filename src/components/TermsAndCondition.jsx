@@ -5,7 +5,7 @@ const TermsAndCondition = () => {
   return (
     <>
     <TermsHeader />
-    <section className="space-y-8 p-6 max-w-6xl mx-auto text-gray-800 dark:text-gray-300 border border-[#bca067] rounded-3xl">
+    <section className="space-y-8 p-6 max-w-6xl mx-auto text-white border border-[#bca067] rounded-3xl">
       <h1 className="text-3xl font-bold text-center text-[#bca067] border-b border-[#bca067] pb-4">
         Terms and Conditions
       </h1>
