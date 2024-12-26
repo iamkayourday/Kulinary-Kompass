@@ -27,7 +27,7 @@ const BackToTop = () => {
     isVisible && (
       <div
         onClick={handleClick}
-        className="fixed bottom-32 right-6 p-4 rounded-full cursor-pointer shadow-lg hover:bg-[#a28e5c] transition duration-300"
+        className="fixed bottom-32 right-6 p-4 rounded-full cursor-pointer shadow-lg hover:bg-[#ae935c] transition duration-300"
         title="Back to Top"
       >
         <svg
@@ -36,7 +36,7 @@ const BackToTop = () => {
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
-          className="h-8 w-8 text-[#bca067] dark:text-[#f1c40f] hover:text-white transition duration-300"
+          className="h-8 w-8 text-[#bca067] dark:text-[#bca067] hover:text-white transition duration-300"
         >
           <path d="M12 19V6" />
           <path d="M5 12l7-7 7 7" />
