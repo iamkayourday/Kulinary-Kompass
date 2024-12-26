@@ -1,28 +1,19 @@
-import AboutUs from "./components/AboutUs"
-import BackToTop from "./components/BackToTop"
-import Contactus from "./components/Contactus"
-import Footer from "./components/Footer"
-import Gallery from "./components/Gallery"
-import Header from "./components/Header"
-import SetUsApart from "./components/SetUsApart"
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import Router, Route, Routes
+import Footer from './components/Footer';
+import Home from './components/Home';
+import TermsAndCondition from './components/TermsAndCondition';
 
 function App() {
- 
-
   return (
-    <>
-    <div className='dark:bg-[#1e1e1f]'>
-      <Header />
-      <AboutUs />
-      <SetUsApart />
-      <Gallery />
-      <Contactus />
-      <BackToTop />
-      <Footer />
-    </div>
-     
-    </>
-  )
+    <Router> {/* Wrap the app with Router to enable routing */}
+      {/* Define Routes */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/terms-and-conditions" element={<TermsAndCondition />} />
+      </Routes>
+      <Footer /> {/* Always render Footer */}
+    </Router>
+  );
 }
 
-export default App
+export default App;

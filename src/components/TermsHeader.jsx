@@ -1,40 +1,45 @@
 import React, { useState, useEffect } from 'react';
-import { FaInstagram, FaYoutube, FaPinterest } from 'react-icons/fa';
-import { MdMenu, MdClose, MdPhone, MdEmail } from 'react-icons/md';
-import { Link } from 'react-scroll';
-import { Link as RouterLink } from 'react-router-dom'; // Import Link from react-router-dom
+import { MdMenu, MdClose, MdEmail } from 'react-icons/md';
+import { Link as RouterLink, useLocation } from 'react-router-dom'; // Import useLocation and RouterLink
 
-const Header = () => {
+const TermsHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // const [isDarkMode, setIsDarkMode] = useState(false); // Commented out dark mode logic
+  // const [isDarkMode, setIsDarkMode] = useState(false); // Commented out dark mode
+  const location = useLocation(); // Get the current location
 
   // Toggle menu visibility
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Toggle dark mode and update localStorage
-  // const toggleDarkMode = () => { // Commented out dark mode toggle function
+  // Toggle dark mode and update localStorage (commented out)
+  // const toggleDarkMode = () => {
   //   const newMode = !isDarkMode;
   //   setIsDarkMode(newMode);
   //   localStorage.setItem('dark-mode', newMode); // Save the preference
   //   document.documentElement.classList.toggle('dark', newMode); // Apply dark mode class
   // };
 
-  // Initialize dark mode based on localStorage on page load
-  // useEffect(() => { // Commented out dark mode initialization
+  // Initialize dark mode based on localStorage on page load (commented out)
+  // useEffect(() => {
   //   const storedMode = localStorage.getItem('dark-mode') === 'true'; // Get stored preference
   //   setIsDarkMode(storedMode);
   //   document.documentElement.classList.toggle('dark', storedMode); // Apply dark mode class
-  // }, []); 
+  // }, []);
 
   // Close the menu when a navigation link is clicked (for mobile)
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
 
+  // Check if the current route is "/terms-and-conditions"
+  const isTermsPage = location.pathname === '/terms-and-conditions';
+
+  // Only render the TermsHeader when on the "/terms-and-conditions" route
+  if (!isTermsPage) return null;
+
   return (
-    <header className={`p-4 bg-[#1e1e1f] text-white sticky top-0 z-50`}>
+    <header className="p-4 sticky top-0 z-50 bg-[#1e1e1f] text-white">
       {/* Header Wrapper */}
       <div
         className="flex items-center justify-between gap-4 px-6 py-3 rounded-3xl border border-[#bca067] mx-auto w-full max-w-7xl"
@@ -49,9 +54,6 @@ const Header = () => {
           <a href="mailto:hello@kulinarykompass.co.uk" target="_blank" rel="noopener noreferrer">
             <MdEmail className="text-lg hover:text-[#bca067]" />
           </a>
-          {/* <a href="tel:00553123-2323" target="_blank" rel="noopener noreferrer">
-            <MdPhone className="text-lg hover:text-[#bca067]" />
-          </a> */}
         </div>
 
         {/* Logo Text */}
@@ -88,58 +90,46 @@ const Header = () => {
           }}
         >
           <li>
-            <Link
-              to="home"
-              smooth={true}
-              offset={-70}
-              duration={500}
+            <RouterLink
+              to="/" // Link to homepage
               className="hover:text-[#bca067] transition-colors cursor-pointer"
               onClick={closeMenu} // Close the menu when this link is clicked
             >
               Home
-            </Link>
+            </RouterLink>
           </li>
           <li>
-            <Link
-              to="about"
-              smooth={true}
-              offset={-70}
-              duration={500}
+            <RouterLink
+              to="/" // Link to homepage
               className="hover:text-[#bca067] transition-colors cursor-pointer"
               onClick={closeMenu}
             >
               About
-            </Link>
+            </RouterLink>
           </li>
           <li>
-            <Link
-              to="gallery"
-              smooth={true}
-              offset={-70}
-              duration={500}
+            <RouterLink
+              to="/" // Link to homepage
               className="hover:text-[#bca067] transition-colors cursor-pointer"
               onClick={closeMenu}
             >
               Gallery
-            </Link>
+            </RouterLink>
           </li>
           <li>
-            <Link
-              to="contact"
-              smooth={true}
-              offset={-70}
-              duration={500}
+            <RouterLink
+              to="/" // Link to homepage
               className="hover:text-[#bca067] transition-colors cursor-pointer"
               onClick={closeMenu}
             >
               Contact
-            </Link>
+            </RouterLink>
           </li>
           <li>
             <RouterLink
-              to="/terms-and-conditions" // Link to the terms and conditions page
+              to="" // Link to homepage
               className="hover:text-[#bca067] transition-colors cursor-pointer"
-              onClick={closeMenu} // Close the menu when this link is clicked
+              onClick={closeMenu}
             >
               Terms and Conditions
             </RouterLink>
@@ -150,4 +140,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default TermsHeader;

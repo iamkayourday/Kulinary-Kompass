@@ -81,14 +81,8 @@ function Contactus() {
                 hesitate to contact us.
               </p>
               <p className="text-center text-white mb-6 dark:text-white">
-                You can also contact us by phone at{" "}
-                <a
-                  href="tel:00553123-2323"
-                  className="text-[#bca067] underline"
-                >
-                  00553123-2323
-                </a>{" "}
-                or email{" "}
+                You can contact us by phone at{" "}
+                email{" "}
                 <a
                   href="mailto:kazeembalogun12@hotmail.com"
                   className="text-[#bca067] underline "

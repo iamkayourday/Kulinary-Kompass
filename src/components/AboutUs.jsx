@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const AboutUs = () => {
   return (
-    <section id="home" className="space-y-16">
+    <section  className="space-y-16">
       {/* Full-Width Image with Motion */}
       <motion.div
         className="w-full mx-auto max-w-6xl"
@@ -53,6 +53,7 @@ const AboutUs = () => {
           transition={{ duration: 1 }}
         >
           <motion.h2
+          id="about"
             className="text-3xl font-semibold text-[#bca067] mb-4"
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
