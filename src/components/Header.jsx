@@ -56,7 +56,7 @@ const Header = () => {
 
         {/* Logo Text */}
         <h1 className="text-xl md:text-2xl font-serif italic text-[#bca067] text-center">
-          Kulinary Kompas
+          Kulinary Kompass
         </h1>
 
         {/* Action Icons */}
